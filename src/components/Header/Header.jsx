@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import rightArrow from '../../assets/icon-arrow-right.svg'
 import classes from './Header.module.css'
 const Header = () => {
@@ -21,13 +22,13 @@ const Header = () => {
           </span>
           
           </p>
-          <button className={`${classes.location_Btn} headingFont`}>
+          <Link className={`${classes.location_Btn} headingFont`} to='/location'>
             <span>Our Location</span>
             <span>
               <img src={rightArrow} alt="" />
             </span>
             
-          </button>
+          </Link>
         </div>
         </div>
       </div>

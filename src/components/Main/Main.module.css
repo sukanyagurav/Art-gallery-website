@@ -1,5 +1,5 @@
 main{
-    margin:18rem 0;
+   
     max-width: 1220px;
     margin-inline: auto;
     width: 100%;
@@ -11,6 +11,7 @@ main{
     display: flex;
     justify-content: space-around;
     gap: 1rem;
+    margin-top:15rem ;
 }
 .left{
     max-width: 400px;
@@ -37,9 +38,9 @@ main{
     'img1 content';
     margin-top: 4rem;
     grid-template-rows: 350px 350px;
-    /* grid-template-columns: repeat(2,1fr); */
+    grid-template-columns: repeat(2,1fr);
     gap: 2rem;
-    padding: 2rem;
+    margin-bottom:10rem ;
 }
 .img1 {
     grid-area: img1;
@@ -67,4 +68,24 @@ main{
     color: var(--white) !important;
     margin-top: 1rem;
     font-size: 1.3rem;
+}
+
+@media (max-width:700px){
+    .section_1 {
+        flex-direction: column-reverse;
+    }
+    .left{
+        max-width: 100%;
+    }
+    .grid{
+        grid-template-areas: 'img1'
+        'img2'
+        'content';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .img2 img,.grid__content{
+        
+        max-width: 100%;
+    }
 }

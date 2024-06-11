@@ -1,0 +1,40 @@
+.cta{
+    background-color: var(--black);
+}
+
+.location{
+   max-width: 1220px;
+   width: 100%;
+   margin-inline: auto;
+   color: var(--white);
+   display: flex;
+   justify-content: space-evenly;
+   padding: 4rem 1rem;
+}
+.location h2{
+    font-size: 3rem;
+}
+.location h3{
+    font-size: 2.3rem;
+    color: var(--brown);
+}
+
+.location__details{
+    flex: 0.6;
+}
+.location__details li{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.location__details p{
+    color: var(--white) !important;
+    margin-top: 1.5rem;
+}
+@media (max-width:690px) {
+    .location{
+        flex-direction: column;
+    }
+    .location h3{
+        margin-top: 2rem;
+    }
+}

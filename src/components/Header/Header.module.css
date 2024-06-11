@@ -10,8 +10,8 @@ header{
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
 }
-
 
 .title{
     color: var(--white);
@@ -21,7 +21,6 @@ header{
     mix-blend-mode: difference;
     font-weight: 800;
 }
-
 
 .right__content{
     flex: 0.3;
@@ -45,6 +44,14 @@ header{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     flex: 0.5;
+    position: relative;
+}
+.bg_1::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(82, 82, 82, 0.249);
 }
 .bg_2{
     width:100%;
@@ -53,10 +60,10 @@ header{
     flex: 0.5;
 }
 .location_Btn{
-   
+    text-decoration: none;
+    display: block;
     margin-top: 2rem;
     text-transform: uppercase;
-    display: flex;
     border: none;
     background-color: transparent;
     height: 60px;
@@ -78,4 +85,53 @@ header{
 }
 .location_Btn:hover span:last-child{
     background-color: var(--black);
+}
+
+@media (max-width:970px ){
+    .bg_1{
+       flex: 1;
+    }
+    .bg_2{
+        display: none;
+    }
+    .container{
+        flex-direction: column;
+        max-width: 500px;
+        margin-left: 24rem;
+    }
+    .title{
+        color: var(--black) !important;
+        font-size: 3.5rem;
+    }
+    .container > *{
+        flex: 1;
+    }
+    .title{
+        mix-blend-mode: normal;
+    }
+}
+@media (max-width:700px) {
+ 
+     header{
+        height: 100%;
+        min-height: auto;
+        justify-content: normal;
+     }
+     header > *{
+        flex: 1;
+     }
+     .bg__content{
+        position: relative;
+        width: 100%;
+     }
+    .bg_1{
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-image: url('../../assets/mobile/image-hero@2x.jpg');
+    }
+    .container{
+        margin: 0;
+    }
 }
