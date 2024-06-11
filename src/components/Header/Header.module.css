@@ -1,0 +1,81 @@
+header{
+    min-height:100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 1220px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.title{
+    color: var(--white);
+    font-size:5.5rem;
+    flex: 0.5;
+    max-width: 385px;
+    mix-blend-mode: difference;
+    font-weight: 800;
+}
+
+
+.right__content{
+    flex: 0.3;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color:var(--gray);
+}
+.bg__content{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    z-index: -1;
+}
+.bg_1{
+    background: url('../../assets/desktop/image-hero@2x.jpg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex: 0.5;
+}
+.bg_2{
+    width:100%;
+    height: 100%;
+    background: var(--black);
+    flex: 0.5;
+}
+.location_Btn{
+   
+    margin-top: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    height: 60px;
+   
+}
+.location_Btn span{
+    padding: 1rem 1.5rem;
+    background-color: var(--black);
+    font-size: 2rem;
+    color: var(--white);
+    transition: all 0.5s ease-out;
+}
+.location_Btn span:last-child{
+    transition: all 0.5s ease-out;
+    background-color: var(--brown);
+}
+.location_Btn:hover span{
+    background-color: var(--brown);
+}
+.location_Btn:hover span:last-child{
+    background-color: var(--black);
+}

@@ -1,0 +1,35 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --brown: hsla(24, 56%, 63%, 1);
+  --black: hsla(0, 0%, 8%, 1);
+  --gray: hsla(0, 0%, 27%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+}
+button{
+  cursor: pointer;
+  font-family: inherit;
+}
+.headingFont{
+  font-family: "Big Shoulders Display", sans-serif;
+}
+.normalFont{
+  font-family: "Outfit", sans-serif;
+}
+body{
+  font-family: "Outfit", sans-serif;
+
+}
+p{
+  color: var(--gray);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.bold{
+  font-weight: 600;
+  color: var(--black);
+}
