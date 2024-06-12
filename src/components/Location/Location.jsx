@@ -1,11 +1,33 @@
 import React from 'react'
 import classes from './Location.module.css'
+import "leaflet/dist/leaflet.css"
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import artGalleryIcon from '../../assets/art gallery.png'
+import { Icon } from 'leaflet'
+import locationIcon from "../../assets/location_icon.png"
 const Location = () => {
+  const position = [41.481312, -71.310410]
+
+  const customIcon = new Icon({
+    iconUrl: locationIcon,
+    iconSize: [40, 40] 
+  })
   return (
    <div className={classes.cta}>
-    <div className="location__graph">
+   <MapContainer center={position} zoom={14} scrollWheelZoom={true} style={{width:'100%',height:'90vh'}}>
+   <TileLayer
+   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    />
+    <Marker position={position}  icon={customIcon}>
+      <Popup>
+      <div style={{display:'flex',alignItems:'center',gap:'0.5rem'}}>
+        <b>MODERN ART GALLERY</b><img src={artGalleryIcon} style={{width:'20px',height:'20px'}} alt="art gallary icon" />
 
-    </div>
+      </div>
+      </Popup>
+    </Marker>
+  </MapContainer>
    
     <section className={classes.location} >
       <h2 className='headingFont'> OUR LOCATION</h2>
